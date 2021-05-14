@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fund Management</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li ><a href="add.html" >Add Funds</a></li>
+          <li><a href="view.html" class="get-started-btn scrollto">View Funds</a></li>
+          <li><a href="edit.html" >Edit Funds</a></li>
+          <!-- <li><a href="">Delete Product</a></li> -->
+          
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>View Funds</h2>
+          <ol>
+            <li><a>Funds</a></li>
+            <li>View Funds</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <table class="table">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Payment_ID</th>
+              <th scope="col">Payment_Type</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Payment_Date</th>
+              <th scope="col">Research_ID</th>
+              <th scope="col">Funder_ID</th>
+              <th scope="col"></th>
+              <!-- "productCode":productCode,
+      "name":name,
+      "productPrice":productPrice,
+      "description":description -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>F01</td>
+              <td>150 Rs</td>
+              <td>test</td>
+              <td>Big</td>
+              <td><button class="btn btn-danger form-control" >Delete Funds</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>F02</td>
+              <td>180 Rs</td>
+              <td>test2</td>
+              <td>test3</td>
+              <td>test5</td>
+              <td><button class="btn btn-danger form-control" >Delete Funds</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>F04</td>
+              <td>150 Rs</td>
+              <td>test1</td>
+              <td>test</td>
+              <td>test1</td>
+              <td><button class="btn btn-danger form-control" >Delete Funds</button></td>
+            </tr>
+            
+            
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+  </main>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-product-price-form/validate.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+
+function submitFunds(){
+	if ($('#payment-code').val() != '' && $('#pType').val() != '' && $('#amount').val() != '' && $('#pDate').val() != '' && $('#RID').val() != '' && $('#FID').val() != '' ) {
+        $('#payment-code').removeClass('is-invalid');
+        $('#pType').removeClass('is-invalid');
+        $('#amount').removeClass('is-invalid');
+        $('#pDate').removeClass('is-invalid');
+        $('#RID').removeClass('is-invalid');
+        $('#FID').removeClass('is-invalid');
+
+        let paymentCode = $('#payment-code').val();
+        let paymentType = $('#pType').val();
+        let amount = $('#amount').val();
+        let pDate = $('#pDate').val();
+        let ResID = $('#RID').val();
+        let FunID = $('#FID').val();
+
+        submitForm(productCode, name, productPrice, description);
+      } else {
+          if ($('#payment-code').val() == '') {
+              $('#payment-code').addClass('is-invalid');
+            }else{
+              $('#payment-code').removeClass('is-invalid');
+            }
+            if($('#payment-code').val() == ''){
+              $('#payment-code').addClass('is-invalid');
+            }else{
+              $('#payment-code').removeClass('is-invalid');
+            }
+            if($('#pType').val() == ''){
+              $('#pType').addClass('is-invalid');
+            }else{
+              $('#pType').removeClass('is-invalid');
+            }
+            if($('#amount').val() == ''){
+              $('#amount').addClass('is-invalid');
+            }else{
+              $('#amount').removeClass('is-invalid');
+            }
+            if($('#pDate').val() == ''){
+                $('#pDate').addClass('is-invalid');
+              }else{
+                $('#pDate').removeClass('is-invalid');
+              }
+            if($('#RID').val() == ''){
+                $('#RID').addClass('is-invalid');
+              }else{
+                $('#RID').removeClass('is-invalid');
+              }
+            if($('#FID').val() == ''){
+                $('#FID').addClass('is-invalid');
+              }else{
+                $('#FID').removeClass('is-invalid');
+              }
+      
+      
+      }
+      
+      
+      
+    }
+
+    function submitForm(paymentCode, paymentType, amount, pDate,ResID,FunID ){
+    let signup={
+   		"Payment_ID":paymentCode,
+ 	    "Payment_Type":paymentType,
+ 	    "Amount":amount,
+ 	    "Payment_Date":pDate,
+ 	    "Research_ID":ResID,
+ 	    "Funder_ID":FunID
+};
+
+console.log(signup);
+
+        
+
+      $.ajax({
+									type: "POST",
+                  url : "https://72i8t1e1sb.execute-api.ap-south-1.amazonaws.com/sign-up-requests",
+                  data: JSON.stringify(signup),
+									contentType: "application/json",
+									dataType: "json",
+									success: function(result){
+                      console.log(result);
+                      console.log("done");
+                      clearAllAndNotify();
+									},
+									error: function (data) {
+                     console.log(error);
+                    var element = document.getElementById("dis-error-message-insub");
+                    element.classList.remove("d-none");
+									}	
+								});
+          
+        
+    }
+    function clearAllAndNotify() {
+    	document.getElementById('payment-code').value=" ";
+        document.getElementById('pType').value=" ";
+        document.getElementById('amount').value=" ";
+        document.getElementById('pDate').value=" ";
+        document.getElementById('RID').value=" ";
+        document.getElementById('FID').value=" ";
+      
+      var element = document.getElementById("sent-message-insub");
+      element.classList.remove("d-none");
+     
+    }
+
+  </script>
+
+</body>
+
+</html>
